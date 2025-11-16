@@ -1,0 +1,146 @@
+[
+  {
+    "course_id": "C101",
+    "faculty_id": "F101",
+    "name": "Introduction to Machine Learning",
+    "description": "A comprehensive introduction to machine learning algorithms, including supervised and unsupervised learning, neural networks, and deep learning fundamentals.",
+    "strength": 45,
+    "syllabus_file": "dataset/syllabus/C101/syllabus.pdf",
+    "timeline_file": "dataset/syllabus/C101/timeline.pdf"
+  },
+  {
+    "course_id": "C102",
+    "faculty_id": "F101",
+    "name": "Advanced Artificial Intelligence",
+    "description": "Deep dive into advanced AI topics including natural language processing, computer vision, reinforcement learning, and ethical considerations in AI.",
+    "strength": 32,
+    "syllabus_file": "dataset/syllabus/C102/syllabus.pdf",
+    "timeline_file": "dataset/syllabus/C102/timeline.pdf"
+  },
+  {
+    "course_id": "C103",
+    "faculty_id": "F102",
+    "name": "Software Engineering Principles",
+    "description": "Fundamental principles of software engineering including requirements analysis, design patterns, testing methodologies, and project management.",
+    "strength": 50,
+    "syllabus_file": "dataset/syllabus/C103/syllabus.pdf",
+    "timeline_file": "dataset/syllabus/C103/timeline.pdf"
+  },
+  {
+    "course_id": "C104",
+    "faculty_id": "F102",
+    "name": "Database Systems and Design",
+    "description": "Comprehensive study of database systems, SQL, NoSQL databases, data modeling, normalization, and database administration.",
+    "strength": 48,
+    "syllabus_file": "dataset/syllabus/C104/syllabus.pdf",
+    "timeline_file": "dataset/syllabus/C104/timeline.pdf"
+  },
+  {
+    "course_id": "C105",
+    "faculty_id": "F103",
+    "name": "Linear Algebra and Applications",
+    "description": "Mathematical foundations of linear algebra including vector spaces, matrices, eigenvalues, and applications in data science and engineering.",
+    "strength": 55,
+    "syllabus_file": "dataset/syllabus/C105/syllabus.pdf",
+    "timeline_file": "dataset/syllabus/C105/timeline.pdf"
+  },
+  {
+    "course_id": "C106",
+    "faculty_id": "F103",
+    "name": "Calculus and Differential Equations",
+    "description": "Advanced calculus topics and differential equations with applications in physics, engineering, and mathematical modeling.",
+    "strength": 52,
+    "syllabus_file": "dataset/syllabus/C106/syllabus.pdf",
+    "timeline_file": "dataset/syllabus/C106/timeline.pdf"
+  },
+  {
+    "course_id": "C107",
+    "faculty_id": "F104",
+    "name": "Probability and Statistics",
+    "description": "Fundamental concepts of probability theory, statistical inference, hypothesis testing, and regression analysis.",
+    "strength": 60,
+    "syllabus_file": "dataset/syllabus/C107/syllabus.pdf",
+    "timeline_file": "dataset/syllabus/C107/timeline.pdf"
+  },
+  {
+    "course_id": "C108",
+    "faculty_id": "F104",
+    "name": "Data Analysis and Visualization",
+    "description": "Practical techniques for data analysis, statistical modeling, and data visualization using modern tools and programming languages.",
+    "strength": 45,
+    "syllabus_file": "dataset/syllabus/C108/syllabus.pdf",
+    "timeline_file": "dataset/syllabus/C108/timeline.pdf"
+  },
+  {
+    "course_id": "C109",
+    "faculty_id": "F105",
+    "name": "Quantum Mechanics I",
+    "description": "Introduction to quantum mechanics covering wave functions, Schr\u00f6dinger equation, quantum states, and fundamental principles.",
+    "strength": 35,
+    "syllabus_file": "dataset/syllabus/C109/syllabus.pdf",
+    "timeline_file": "dataset/syllabus/C109/timeline.pdf"
+  },
+  {
+    "course_id": "C110",
+    "faculty_id": "F105",
+    "name": "Computational Physics",
+    "description": "Numerical methods and computational techniques for solving physics problems using programming and simulation.",
+    "strength": 40,
+    "syllabus_file": "dataset/syllabus/C110/syllabus.pdf",
+    "timeline_file": "dataset/syllabus/C110/timeline.pdf"
+  },
+  {
+    "course_id": "C111",
+    "faculty_id": "F106",
+    "name": "Thermodynamics and Statistical Mechanics",
+    "description": "Principles of thermodynamics, statistical mechanics, and their applications to understanding physical systems.",
+    "strength": 38,
+    "syllabus_file": "dataset/syllabus/C111/syllabus.pdf",
+    "timeline_file": "dataset/syllabus/C111/timeline.pdf"
+  },
+  {
+    "course_id": "C112",
+    "faculty_id": "F106",
+    "name": "Materials Science Fundamentals",
+    "description": "Introduction to materials science covering crystal structures, phase diagrams, mechanical properties, and material characterization.",
+    "strength": 42,
+    "syllabus_file": "dataset/syllabus/C112/syllabus.pdf",
+    "timeline_file": "dataset/syllabus/C112/timeline.pdf"
+  },
+  {
+    "course_id": "C113",
+    "faculty_id": "F107",
+    "name": "Organic Chemistry I",
+    "description": "Fundamental principles of organic chemistry including structure, bonding, reactions, and mechanisms of organic compounds.",
+    "strength": 65,
+    "syllabus_file": "dataset/syllabus/C113/syllabus.pdf",
+    "timeline_file": "dataset/syllabus/C113/timeline.pdf"
+  },
+  {
+    "course_id": "C114",
+    "faculty_id": "F107",
+    "name": "Chemical Synthesis and Methodology",
+    "description": "Advanced topics in chemical synthesis, reaction mechanisms, and modern synthetic methodologies in organic chemistry.",
+    "strength": 30,
+    "syllabus_file": "dataset/syllabus/C114/syllabus.pdf",
+    "timeline_file": "dataset/syllabus/C114/timeline.pdf"
+  },
+  {
+    "course_id": "C115",
+    "faculty_id": "F108",
+    "name": "Analytical Chemistry",
+    "description": "Principles and techniques of analytical chemistry including spectroscopy, chromatography, and electrochemical methods.",
+    "strength": 50,
+    "syllabus_file": "dataset/syllabus/C115/syllabus.pdf",
+    "timeline_file": "dataset/syllabus/C115/timeline.pdf"
+  },
+  {
+    "course_id": "C116",
+    "faculty_id": "F108",
+    "name": "Environmental Chemistry",
+    "description": "Study of chemical processes in the environment, pollution, environmental monitoring, and sustainable chemistry practices.",
+    "strength": 45,
+    "syllabus_file": "dataset/syllabus/C116/syllabus.pdf",
+    "timeline_file": "dataset/syllabus/C116/timeline.pdf"
+  }
+]

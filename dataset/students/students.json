@@ -1,0 +1,78 @@
+[
+  {
+    "student_id": "S001",
+    "name": "John Smith",
+    "email": "john.smith@university.edu",
+    "password_hash": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
+    "enrolled_courses": ["C101", "C103"]
+  },
+  {
+    "student_id": "S002",
+    "name": "Emily Johnson",
+    "email": "emily.johnson@university.edu",
+    "password_hash": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
+    "enrolled_courses": ["C101", "C105"]
+  },
+  {
+    "student_id": "S003",
+    "name": "Michael Brown",
+    "email": "michael.brown@university.edu",
+    "password_hash": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
+    "enrolled_courses": ["C102", "C104"]
+  },
+  {
+    "student_id": "S004",
+    "name": "Sarah Davis",
+    "email": "sarah.davis@university.edu",
+    "password_hash": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
+    "enrolled_courses": ["C102", "C106"]
+  },
+  {
+    "student_id": "S005",
+    "name": "David Wilson",
+    "email": "david.wilson@university.edu",
+    "password_hash": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
+    "enrolled_courses": ["C103", "C107"]
+  },
+  {
+    "student_id": "S006",
+    "name": "Jessica Martinez",
+    "email": "jessica.martinez@university.edu",
+    "password_hash": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
+    "enrolled_courses": ["C104", "C108"]
+  },
+  {
+    "student_id": "S007",
+    "name": "Christopher Lee",
+    "email": "christopher.lee@university.edu",
+    "password_hash": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
+    "enrolled_courses": ["C105", "C109"]
+  },
+  {
+    "student_id": "S008",
+    "name": "Amanda Taylor",
+    "email": "amanda.taylor@university.edu",
+    "password_hash": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
+    "enrolled_courses": ["C106", "C110"]
+  },
+  {
+    "student_id": "S009",
+    "name": "James Anderson",
+    "email": "james.anderson@university.edu",
+    "password_hash": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
+    "enrolled_courses": ["C107", "C111"]
+  },
+  {
+    "student_id": "S010",
+    "name": "Lisa Thompson",
+    "email": "lisa.thompson@university.edu",
+    "password_hash": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
+    "enrolled_courses": ["C108", "C112"]
+  }
+]
+
+
+
+
+
+

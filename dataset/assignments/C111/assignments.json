@@ -1,0 +1,70 @@
+[
+  {
+    "assignment_id": "C111_A01",
+    "course_id": "C111",
+    "title": "Foundational Concepts Analysis",
+    "description": "This assignment requires you to demonstrate your understanding of the fundamental concepts introduced in the first part of the course. You will analyze key theoretical frameworks, apply them to specific problems, and critically evaluate their implications.\n\nThe assignment consists of three main components. First, you must provide a comprehensive explanation of the core concepts, demonstrating both breadth and depth of understanding. This should include definitions, relationships between concepts, and their historical development. Second, you will apply these concepts to solve a series of problems or analyze case studies. Your solutions should show clear reasoning, proper methodology, and accurate application of theoretical knowledge. Third, you will write a critical reflection on the limitations and potential extensions of these concepts, drawing connections to real-world applications or current research.\n\nYour work should be well-organized, clearly written, and properly cited. You are expected to use multiple sources beyond the textbook, including peer-reviewed articles, reputable online resources, and relevant examples from current practice. The assignment should demonstrate your ability to synthesize information from various sources and present it in a coherent and professional manner.",
+    "deliverables": [
+      "Written report (8-10 pages, double-spaced)",
+      "Problem solutions with detailed explanations",
+      "Bibliography with at least 10 sources",
+      "Appendix with calculations or additional analysis (if applicable)"
+    ],
+    "submission_instructions": "Submit your assignment through the course learning management system as a single PDF document. Include all components in the specified order. The filename should be: LastName_FirstName_Assignment1.pdf. Late submissions will be penalized according to the course policy.",
+    "formatting_requirements": "Use 12-point Times New Roman or Arial font, 1-inch margins on all sides, double-spacing for main text, single-spacing for references. Include a title page with your name, student ID, course number, assignment number, and submission date. Number all pages. Use APA or MLA citation style consistently throughout.",
+    "due_date": "2024-05-15",
+    "max_score": 100,
+    "weight": 10
+  },
+  {
+    "assignment_id": "C111_A02",
+    "course_id": "C111",
+    "title": "Research Paper and Literature Review",
+    "description": "This assignment focuses on developing your research and critical analysis skills. You will select a topic related to the course material, conduct a comprehensive literature review, and write a research paper that contributes to the existing body of knowledge.\n\nBegin by identifying a specific research question or problem within the course domain. This should be a topic that interests you and has sufficient scholarly literature available. Conduct a thorough literature review using academic databases, identifying at least 15-20 peer-reviewed sources. Your literature review should not merely summarize sources but should synthesize them, identify themes, gaps in current research, and establish the context for your own analysis.\n\nYour research paper should include: an introduction that establishes the research question and its significance; a comprehensive literature review section; a methodology section describing your approach to analysis; a results/discussion section presenting your findings and analysis; and a conclusion that summarizes your contributions and suggests directions for future research. You should demonstrate critical thinking by evaluating different perspectives, identifying strengths and weaknesses in existing research, and proposing novel insights or connections.",
+    "deliverables": [
+      "Research paper (12-15 pages, double-spaced)",
+      "Annotated bibliography (at least 15 sources)",
+      "Research proposal outline (2 pages)",
+      "Presentation slides (10-12 slides) for in-class presentation"
+    ],
+    "submission_instructions": "Submit your complete research paper as a PDF document through the learning management system. The presentation slides should be submitted separately in PowerPoint or PDF format. Include all components by the deadline. Email the instructor if you encounter technical difficulties with submission.",
+    "formatting_requirements": "Follow academic paper formatting standards: 12-point font, double-spacing, 1-inch margins, page numbers, section headings. Use a consistent citation style (APA recommended). Include abstract, table of contents, and properly formatted references section. Figures and tables should be numbered and captioned.",
+    "due_date": "2024-08-20",
+    "max_score": 100,
+    "weight": 15
+  },
+  {
+    "assignment_id": "C111_A03",
+    "course_id": "C111",
+    "title": "Practical Application Project",
+    "description": "This assignment requires you to apply course concepts to a real-world problem or scenario. You will design and implement a solution, document your process, and evaluate the results. This project emphasizes practical skills, problem-solving, and the application of theoretical knowledge.\n\nSelect a problem or scenario that can be addressed using concepts and methods from the course. This could involve analyzing a dataset, designing a system, developing a model, or solving a specific problem. Your project should be substantial enough to demonstrate mastery of course material but focused enough to be completed within the assignment timeframe.\n\nYour project should include: a clear problem statement and objectives; a detailed methodology describing your approach; implementation details (code, calculations, designs, etc.); results and analysis; discussion of limitations and potential improvements; and conclusions. You should demonstrate both technical competence and critical thinking about your approach and results. If working in a group, clearly indicate each member's contributions.",
+    "deliverables": [
+      "Project report (10-12 pages) documenting the entire project",
+      "Implementation files (code, data, models, etc.)",
+      "User manual or documentation (if applicable)",
+      "Presentation (15-20 minutes) with slides and demonstration"
+    ],
+    "submission_instructions": "Submit your project report as a PDF. Implementation files should be submitted as a zip archive. Include a README file explaining the project structure and how to run/use your implementation. Presentation should be submitted separately. All files should be clearly labeled and organized.",
+    "formatting_requirements": "Professional report format with clear sections, figures, tables, and appendices. Code should be well-commented and formatted. Include a table of contents, list of figures/tables, and proper citations. Use consistent formatting throughout.",
+    "due_date": "2024-11-25",
+    "max_score": 100,
+    "weight": 15
+  },
+  {
+    "assignment_id": "C111_A04",
+    "course_id": "C111",
+    "title": "Comprehensive Final Project",
+    "description": "This final assignment serves as a capstone project that integrates all major concepts and skills developed throughout the course. You will undertake a comprehensive project that demonstrates your ability to apply course material to a complex, multi-faceted problem.\n\nYour project should address a significant problem or question that requires the integration of multiple course topics. This is an opportunity to demonstrate not only your understanding of individual concepts but also your ability to synthesize knowledge, make connections between different areas, and apply this integrated understanding to solve complex problems.\n\nThe project should be substantial and demonstrate: mastery of core course concepts; ability to integrate multiple topics; application of appropriate methodologies; critical analysis and evaluation; professional presentation of work; and original thinking or novel applications. You may choose to extend previous assignments, explore a new topic in depth, or address a problem that combines multiple course themes. Your work should be of publishable or professional quality.",
+    "deliverables": [
+      "Comprehensive project report (15-20 pages)",
+      "All supporting materials (code, data, models, etc.)",
+      "Executive summary (1-2 pages)",
+      "Final presentation (20-25 minutes) with Q&A"
+    ],
+    "submission_instructions": "Submit your complete project package through the learning management system. This should include the main report (PDF), all supporting files (as a zip archive), and presentation materials. Ensure all files are properly organized and clearly labeled. This is a major assignment - plan accordingly and submit well before the deadline.",
+    "formatting_requirements": "Professional, publication-quality formatting. Include abstract, executive summary, detailed table of contents, comprehensive references, appendices, and all supporting materials. Figures and tables should be publication-ready. Follow academic or professional formatting standards appropriate to your field.",
+    "due_date": "2024-14-30",
+    "max_score": 100,
+    "weight": 20
+  }
+]

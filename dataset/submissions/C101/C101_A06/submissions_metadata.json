@@ -1,0 +1,18 @@
+[
+  {
+    "filename": "S001_1763154985695.pdf",
+    "student_id": "S001",
+    "student_name": "John Smith",
+    "submitted_at": "2025-11-14T21:16:25.698Z",
+    "course_id": "C101",
+    "assignment_id": "C101_A06"
+  },
+  {
+    "filename": "S001_1763248440754.pdf",
+    "student_id": "S001",
+    "student_name": "John Smith",
+    "submitted_at": "2025-11-15T23:14:00.770Z",
+    "course_id": "C101",
+    "assignment_id": "C101_A06"
+  }
+]

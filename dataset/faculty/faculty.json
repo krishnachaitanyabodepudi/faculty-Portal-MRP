@@ -1,0 +1,130 @@
+[
+  {
+    "faculty_id": "F101",
+    "name": "Dr. Sarah Mitchell",
+    "email": "sarah.mitchell@university.edu",
+    "department": "Computer Science",
+    "designation": "Professor",
+    "bio": "Dr. Sarah Mitchell is a distinguished professor with over 20 years of experience in computer science education. She holds a Ph.D. in Computer Science from MIT and has published over 150 research papers in top-tier conferences and journals. Her research focuses on machine learning, artificial intelligence, and distributed systems. She has received numerous teaching awards and serves on the editorial boards of several prestigious journals.",
+    "research_areas": [
+      "Machine Learning",
+      "Artificial Intelligence",
+      "Distributed Systems",
+      "Neural Networks"
+    ],
+    "office_hours": "Monday 2:00 PM - 4:00 PM, Wednesday 10:00 AM - 12:00 PM",
+    "password_hash": "36333b79fc583f49280b8d92ab9e9e9c3da0987757820b96cd33288c2b101a7c"
+  },
+  {
+    "faculty_id": "F102",
+    "name": "Dr. James Anderson",
+    "email": "james.anderson@university.edu",
+    "department": "Computer Science",
+    "designation": "Associate Professor",
+    "bio": "Dr. James Anderson specializes in software engineering and database systems. He received his Ph.D. from Stanford University and has worked in both academia and industry. His current research interests include cloud computing, microservices architecture, and database optimization. He has authored three textbooks on software engineering and database design.",
+    "research_areas": [
+      "Software Engineering",
+      "Database Systems",
+      "Cloud Computing",
+      "Microservices"
+    ],
+    "office_hours": "Tuesday 1:00 PM - 3:00 PM, Thursday 2:00 PM - 4:00 PM",
+    "password_hash": "c29184c610e8ab947825ad279ce63fb09023f8b5b726d46a6e1877287df2f6a8"
+  },
+  {
+    "faculty_id": "F103",
+    "name": "Dr. Emily Chen",
+    "email": "emily.chen@university.edu",
+    "department": "Mathematics",
+    "designation": "Professor",
+    "bio": "Dr. Emily Chen is a renowned mathematician with expertise in applied mathematics and computational methods. She earned her Ph.D. from Princeton University and has made significant contributions to numerical analysis and mathematical modeling. Her work has applications in engineering, physics, and data science. She is a fellow of the American Mathematical Society.",
+    "research_areas": [
+      "Applied Mathematics",
+      "Numerical Analysis",
+      "Mathematical Modeling",
+      "Computational Methods"
+    ],
+    "office_hours": "Monday 11:00 AM - 1:00 PM, Friday 2:00 PM - 4:00 PM",
+    "password_hash": "915904e683dde31b37f7c1868058fd882e2646eec1456f05d1bab10af2405d92"
+  },
+  {
+    "faculty_id": "F104",
+    "name": "Dr. Michael Rodriguez",
+    "email": "michael.rodriguez@university.edu",
+    "department": "Mathematics",
+    "designation": "Associate Professor",
+    "bio": "Dr. Michael Rodriguez focuses on statistics and data analysis. He received his Ph.D. from UC Berkeley and has extensive experience in statistical modeling and experimental design. His research spans both theoretical statistics and practical applications in business analytics and scientific research. He has consulted for several Fortune 500 companies.",
+    "research_areas": [
+      "Statistics",
+      "Data Analysis",
+      "Statistical Modeling",
+      "Experimental Design"
+    ],
+    "office_hours": "Tuesday 10:00 AM - 12:00 PM, Thursday 1:00 PM - 3:00 PM",
+    "password_hash": "e7fed3759e6f924fc9ba7db669dd2ac74b0bb0391fae6e7704806ad6f5b4f419"
+  },
+  {
+    "faculty_id": "F105",
+    "name": "Dr. Lisa Thompson",
+    "email": "lisa.thompson@university.edu",
+    "department": "Physics",
+    "designation": "Professor",
+    "bio": "Dr. Lisa Thompson is an accomplished physicist specializing in quantum mechanics and computational physics. She holds a Ph.D. from Caltech and has conducted groundbreaking research in quantum computing and quantum information theory. Her work has been published in Nature and Physical Review Letters. She has received the National Science Foundation Career Award.",
+    "research_areas": [
+      "Quantum Mechanics",
+      "Computational Physics",
+      "Quantum Computing",
+      "Quantum Information Theory"
+    ],
+    "office_hours": "Monday 3:00 PM - 5:00 PM, Wednesday 11:00 AM - 1:00 PM",
+    "password_hash": "3e43a370ec236f5db45ea1684993bd019b7bec4aae766cca84b5669cb4affafb"
+  },
+  {
+    "faculty_id": "F106",
+    "name": "Dr. Robert Kim",
+    "email": "robert.kim@university.edu",
+    "department": "Physics",
+    "designation": "Assistant Professor",
+    "bio": "Dr. Robert Kim is an emerging researcher in condensed matter physics and materials science. He completed his Ph.D. at Harvard University and postdoctoral work at MIT. His research focuses on novel materials for energy applications and understanding phase transitions in complex systems. He has published over 40 papers in high-impact journals.",
+    "research_areas": [
+      "Condensed Matter Physics",
+      "Materials Science",
+      "Phase Transitions",
+      "Energy Materials"
+    ],
+    "office_hours": "Tuesday 2:00 PM - 4:00 PM, Friday 10:00 AM - 12:00 PM",
+    "password_hash": "08a2dce06ff64ff07133c21c5f4923abd60fcc3468d868be76bdd2d85c7a3e5e"
+  },
+  {
+    "faculty_id": "F107",
+    "name": "Dr. Patricia Williams",
+    "email": "patricia.williams@university.edu",
+    "department": "Chemistry",
+    "designation": "Professor",
+    "bio": "Dr. Patricia Williams is a leading expert in organic chemistry and chemical synthesis. She earned her Ph.D. from the University of Cambridge and has developed several novel synthetic methodologies. Her research has applications in pharmaceutical development and materials chemistry. She has been awarded the American Chemical Society Award for Creative Research.",
+    "research_areas": [
+      "Organic Chemistry",
+      "Chemical Synthesis",
+      "Pharmaceutical Chemistry",
+      "Materials Chemistry"
+    ],
+    "office_hours": "Monday 10:00 AM - 12:00 PM, Wednesday 2:00 PM - 4:00 PM",
+    "password_hash": "9ac9e8379f7d3cb43783d176dddefe92e4cb97e4096781cfbd8ce05f33397fe6"
+  },
+  {
+    "faculty_id": "F108",
+    "name": "Dr. David Lee",
+    "email": "david.lee@university.edu",
+    "department": "Chemistry",
+    "designation": "Associate Professor",
+    "bio": "Dr. David Lee specializes in analytical chemistry and environmental chemistry. He received his Ph.D. from the University of California, Los Angeles, and has extensive experience in developing analytical methods for environmental monitoring. His research focuses on trace analysis, chromatography, and mass spectrometry. He has collaborated with environmental agencies and research institutions worldwide.",
+    "research_areas": [
+      "Analytical Chemistry",
+      "Environmental Chemistry",
+      "Chromatography",
+      "Mass Spectrometry"
+    ],
+    "office_hours": "Thursday 10:00 AM - 12:00 PM, Friday 1:00 PM - 3:00 PM",
+    "password_hash": "c7674a5ed097765af2e1b13592b08858d3334b554c99ccd95682760db06fc8f8"
+  }
+]
