@@ -42,6 +42,8 @@ export function AdminLogin({ onLogin }: AdminLoginProps) {
 
       if (data.success && data.user) {
         console.log('Admin login successful:', data.user)
+        localStorage.setItem('user', JSON.stringify(data.user))
+        localStorage.setItem('userRole', 'admin')
         onLogin(data.user)
       } else {
         setError(data.error || "Invalid admin credentials")

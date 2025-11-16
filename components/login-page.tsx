@@ -54,6 +54,10 @@ export function LoginPage({ onLogin }: LoginPageProps) {
       if (data.success && data.user) {
         console.log('Login successful, user:', data.user)
         
+        // Store authentication in localStorage
+        localStorage.setItem('user', JSON.stringify(data.user))
+        localStorage.setItem('userRole', loginType || 'faculty')
+        
         // Redirect based on login type
         if (loginType === 'admin') {
           window.location.href = '/admin'

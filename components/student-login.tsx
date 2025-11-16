@@ -42,6 +42,8 @@ export function StudentLogin({ onLogin }: StudentLoginProps) {
       const data = await response.json()
 
       if (data.success && data.user) {
+        localStorage.setItem('user', JSON.stringify(data.user))
+        localStorage.setItem('userRole', 'student')
         onLogin(data.user)
       } else {
         setError(data.error || "Invalid email or password")
