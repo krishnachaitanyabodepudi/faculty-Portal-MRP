@@ -328,13 +328,15 @@ export function FeedbackAnalysisDialog({ open, onOpenChange, assignment, submiss
                           <span className="font-semibold">{result.studentName}</span>
                           <span className="text-sm text-muted-foreground ml-2">({result.studentId})</span>
                         </div>
-                        <Badge
-                          className={
-                            result.score >= 80 ? "bg-green-600" : result.score >= 60 ? "bg-yellow-600" : "bg-red-600"
-                          }
-                        >
-                          {(typeof result.score === 'number' ? result.score : 0).toFixed(1)}%
-                        </Badge>
+                        {typeof result.score === 'number' && result.score > 0 && (
+                          <Badge
+                            className={
+                              result.score >= 80 ? "bg-green-600" : result.score >= 60 ? "bg-yellow-600" : "bg-orange-600"
+                            }
+                          >
+                            {result.score.toFixed(1)}%
+                          </Badge>
+                        )}
                       </div>
                       <p className="text-sm text-muted-foreground mb-3 whitespace-pre-wrap">{result.feedback}</p>
                       <div className="flex items-center justify-between pt-3 border-t">

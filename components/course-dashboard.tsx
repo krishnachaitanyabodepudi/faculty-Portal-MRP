@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { BookOpen, Trash2, LogOut, Bell, Clock, Users, Sparkles } from 'lucide-react'
+import { BookOpen, Trash2, LogOut, Clock, Users, Sparkles } from 'lucide-react'
 import { CourseDetailView } from "@/components/course-detail-view"
 
 interface Course {
@@ -32,7 +32,6 @@ export function CourseDashboard({ user, onLogout }: CourseDashboardProps) {
   const [courses, setCourses] = useState<Course[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null)
-  const [notifications] = useState(7)
 
   useEffect(() => {
     if (user && user.id) {
@@ -133,14 +132,6 @@ export function CourseDashboard({ user, onLogout }: CourseDashboardProps) {
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <button className="relative p-3 rounded-2xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
-                <Bell className="w-6 h-6 text-gray-700 dark:text-gray-300" />
-                {notifications > 0 && (
-                  <span className="absolute top-1 right-1 w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center">
-                    {notifications}
-                  </span>
-                )}
-              </button>
               <Button
                 variant="outline"
                 onClick={onLogout}

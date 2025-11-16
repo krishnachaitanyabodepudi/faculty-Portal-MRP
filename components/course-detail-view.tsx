@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { ArrowLeft, BookOpen, MessageSquare, BarChart3, LogOut, Bell, Sparkles, FileText } from 'lucide-react'
+import { ArrowLeft, BookOpen, MessageSquare, BarChart3, LogOut, Sparkles, FileText } from 'lucide-react'
 import { SyllabusTab } from "@/components/syllabus-tab"
 import { ChatbotTab } from "@/components/chatbot-tab"
 import { FeedbackAnalyzerTab } from "@/components/feedback-analyzer-tab"
@@ -24,7 +24,6 @@ interface CourseDetailViewProps {
 
 export function CourseDetailView({ course, onBack, onLogout }: CourseDetailViewProps) {
   const [activeTab, setActiveTab] = useState<"syllabus" | "chatbot" | "feedback" | "assignments">("syllabus")
-  const [notifications] = useState(3)
 
   const tabs = [
     { id: "syllabus" as const, label: "Syllabus", icon: BookOpen, color: "blue" },
@@ -63,14 +62,6 @@ export function CourseDetailView({ course, onBack, onLogout }: CourseDetailViewP
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <button className="relative p-3 rounded-2xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
-                <Bell className="w-6 h-6 text-gray-700 dark:text-gray-300" />
-                {notifications > 0 && (
-                  <span className="absolute top-1 right-1 w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center">
-                    {notifications}
-                  </span>
-                )}
-              </button>
               <Button
                 variant="outline"
                 onClick={onLogout}
