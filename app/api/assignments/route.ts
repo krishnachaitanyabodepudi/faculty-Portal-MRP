@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { readFileSync, writeFileSync, existsSync } from 'fs'
+import { readFileSync, writeFileSync, existsSync, rmSync } from 'fs'
 import { join } from 'path'
 
 interface Assignment {
@@ -154,6 +154,23 @@ export async function DELETE(request: Request) {
     } catch (error) {
       console.error('Error deleting related rubrics:', error)
       // Continue even if rubric deletion fails
+    }
+
+    // Delete any submissions for this assignment from dataset/submissions/<courseId>/<assignmentId>
+    try {
+      const submissionsDir = join(
+        process.cwd(),
+        'dataset',
+        'submissions',
+        deletedAssignment.course_id,
+        assignmentId
+      )
+      if (existsSync(submissionsDir)) {
+        rmSync(submissionsDir, { recursive: true, force: true })
+      }
+    } catch (error) {
+      console.error('Error deleting assignment submissions directory:', error)
+      // This should not block the main delete operation
     }
 
     return NextResponse.json({ 

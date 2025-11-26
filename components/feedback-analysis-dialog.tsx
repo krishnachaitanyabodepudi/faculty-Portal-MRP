@@ -189,6 +189,12 @@ export function FeedbackAnalysisDialog({ open, onOpenChange, assignment, submiss
     setShowRubric(false)
   }
 
+  // Normalize overall score so we can safely control when to show it
+  const overallScore =
+    analysisResults && analysisResults.overallScore != null
+      ? Number(analysisResults.overallScore)
+      : null
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent 
@@ -290,7 +296,9 @@ export function FeedbackAnalysisDialog({ open, onOpenChange, assignment, submiss
               <CardContent className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-lg font-semibold">Overall Analysis</h3>
-                  <Badge className="text-lg px-4 py-1 bg-blue-600">{analysisResults.overallScore}%</Badge>
+                  {typeof overallScore === "number" && overallScore > 0 && (
+                    <Badge className="text-lg px-4 py-1 bg-blue-600">{overallScore}%</Badge>
+                  )}
                 </div>
                 <div className="grid grid-cols-2 gap-6">
                   <div>

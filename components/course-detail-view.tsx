@@ -2,11 +2,12 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { ArrowLeft, BookOpen, MessageSquare, BarChart3, LogOut, Sparkles, FileText } from 'lucide-react'
+import { ArrowLeft, BookOpen, MessageSquare, BarChart3, LogOut, Sparkles, FileText, Mail } from 'lucide-react'
 import { SyllabusTab } from "@/components/syllabus-tab"
 import { ChatbotTab } from "@/components/chatbot-tab"
 import { FeedbackAnalyzerTab } from "@/components/feedback-analyzer-tab"
 import { AssignmentsTab } from "@/components/assignments-tab"
+import { AnnouncementsPanel } from "@/components/announcements-panel"
 
 interface Course {
   id: string
@@ -20,16 +21,19 @@ interface CourseDetailViewProps {
   course: Course
   onBack: () => void
   onLogout: () => void
+  facultyId?: string
+  facultyName?: string
 }
 
-export function CourseDetailView({ course, onBack, onLogout }: CourseDetailViewProps) {
-  const [activeTab, setActiveTab] = useState<"syllabus" | "chatbot" | "feedback" | "assignments">("syllabus")
+export function CourseDetailView({ course, onBack, onLogout, facultyId, facultyName }: CourseDetailViewProps) {
+  const [activeTab, setActiveTab] = useState<"syllabus" | "chatbot" | "feedback" | "assignments" | "announcements">("syllabus")
 
   const tabs = [
     { id: "syllabus" as const, label: "Syllabus", icon: BookOpen, color: "blue" },
     { id: "assignments" as const, label: "Assignments", icon: FileText, color: "orange" },
     { id: "chatbot" as const, label: "Assistant", icon: MessageSquare, color: "purple" },
     { id: "feedback" as const, label: "Feedback Analyzer", icon: BarChart3, color: "green" },
+    { id: "announcements" as const, label: "Announcements", icon: Mail, color: "indigo" },
   ]
 
   return (
@@ -108,6 +112,16 @@ export function CourseDetailView({ course, onBack, onLogout }: CourseDetailViewP
           {activeTab === "assignments" && <AssignmentsTab course={course} />}
           {activeTab === "chatbot" && <ChatbotTab course={course} />}
           {activeTab === "feedback" && <FeedbackAnalyzerTab course={course} />}
+          {activeTab === "announcements" && (
+            <div className="max-w-4xl">
+              <AnnouncementsPanel
+                facultyId={facultyId}
+                facultyName={facultyName}
+                courseIdFilter={course.id}
+                hideCourseSelector
+              />
+            </div>
+          )}
         </div>
       </main>
     </div>

@@ -103,6 +103,10 @@ but you are ALLOWED and EXPECTED to go deeper academically if needed.
     try {
       const result = await model.generateContentStream({
         contents: formattedMessages,
+        generationConfig: {
+          // Limit response length so answers stay focused and not too long
+          maxOutputTokens: 320,
+        },
       });
 
       const stream = new ReadableStream({
@@ -133,6 +137,9 @@ but you are ALLOWED and EXPECTED to go deeper academically if needed.
     // Fallback to regular response if streaming fails
     const fallback = await model.generateContent({
       contents: formattedMessages,
+      generationConfig: {
+        maxOutputTokens: 320,
+      },
     });
 
     const reply = fallback.response.text();

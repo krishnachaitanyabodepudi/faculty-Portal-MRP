@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { BookOpen, Trash2, LogOut, Clock, Users, Sparkles } from 'lucide-react'
+import { BookOpen, Trash2, LogOut, Clock, Users, Sparkles, Mail } from 'lucide-react'
 import { CourseDetailView } from "@/components/course-detail-view"
+import { AnnouncementsPanel } from "@/components/announcements-panel"
 
 interface Course {
   id: string
@@ -32,6 +33,7 @@ export function CourseDashboard({ user, onLogout }: CourseDashboardProps) {
   const [courses, setCourses] = useState<Course[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null)
+  const [activeTab, setActiveTab] = useState<"courses" | "mail">("courses")
 
   useEffect(() => {
     if (user && user.id) {
@@ -109,7 +111,15 @@ export function CourseDashboard({ user, onLogout }: CourseDashboardProps) {
   }
 
   if (selectedCourse) {
-    return <CourseDetailView course={selectedCourse} onBack={() => setSelectedCourse(null)} onLogout={onLogout} />
+    return (
+      <CourseDetailView
+        course={selectedCourse}
+        onBack={() => setSelectedCourse(null)}
+        onLogout={onLogout}
+        facultyId={user?.id}
+        facultyName={user?.name}
+      />
+    )
   }
 
   return (
@@ -146,15 +156,34 @@ export function CourseDashboard({ user, onLogout }: CourseDashboardProps) {
       </header>
 
       <main className="max-w-7xl mx-auto px-6 py-12">
-        {/* Custom section header */}
-        <div className="flex items-center justify-between mb-10 animate-slide-up">
-          <div>
-            <h2 className="text-5xl font-black text-gray-900 dark:text-white mb-3 tracking-tight">
-              My Courses
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 font-medium">
-              {courses.length} {courses.length === 1 ? "course" : "courses"} this semester
-            </p>
+        {/* Tabs: Courses / Mail */}
+        <div className="flex items-center justify-between mb-8 animate-slide-up">
+          <div className="flex gap-2 rounded-2xl bg-white/80 dark:bg-gray-900/80 border border-gray-200 dark:border-gray-800 p-1">
+            <button
+              onClick={() => setActiveTab("courses")}
+              className={`px-4 py-2 text-sm font-semibold rounded-xl flex items-center gap-2 transition ${
+                activeTab === "courses"
+                  ? "bg-blue-600 text-white shadow-md"
+                  : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+              }`}
+            >
+              <BookOpen className="w-4 h-4" />
+              Courses
+            </button>
+            <button
+              onClick={() => setActiveTab("mail")}
+              className={`px-4 py-2 text-sm font-semibold rounded-xl flex items-center gap-2 transition ${
+                activeTab === "mail"
+                  ? "bg-blue-600 text-white shadow-md"
+                  : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+              }`}
+            >
+              <Mail className="w-4 h-4" />
+              Mail
+            </button>
+          </div>
+          <div className="hidden md:block text-sm text-gray-600 dark:text-gray-400 font-medium">
+            {courses.length} {courses.length === 1 ? "course" : "courses"} this semester
           </div>
         </div>
 
@@ -168,7 +197,7 @@ export function CourseDashboard({ user, onLogout }: CourseDashboardProps) {
               Fetching courses for {user?.name || 'faculty'}...
             </p>
           </div>
-        ) : courses.length === 0 ? (
+        ) : activeTab === "courses" && courses.length === 0 ? (
           <div className="bg-white dark:bg-gray-900 rounded-3xl p-16 border-4 border-dashed border-gray-300 dark:border-gray-700 text-center animate-fade-in">
             <div className="w-24 h-24 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-950/30 dark:to-purple-950/30 rounded-3xl flex items-center justify-center mx-auto mb-6">
               <BookOpen className="w-12 h-12 text-gray-400" />
@@ -178,59 +207,68 @@ export function CourseDashboard({ user, onLogout }: CourseDashboardProps) {
               Contact your administrator to add courses
             </p>
           </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {courses.map((course, index) => (
-              <div
-                key={course.id}
-                className="group cursor-pointer animate-slide-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-                onClick={() => setSelectedCourse(course)}
-              >
-                <div className="bg-white dark:bg-gray-900 rounded-3xl p-6 border-2 border-gray-200 dark:border-gray-800 hover:border-blue-600 dark:hover:border-blue-600 shadow-lg hover:shadow-2xl transition-all transform hover:scale-[1.02]">
-                  {/* Course code badge */}
-                  <div className="flex items-start justify-between mb-4">
-                    <span className="inline-block px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-xl text-sm shadow-md">
-                      {course.code}
-                    </span>
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation()
-                        handleDeleteCourse(course.id)
-                      }}
-                      className="p-2 rounded-xl text-gray-400 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-950/30 transition-colors"
-                    >
-                      <Trash2 className="w-5 h-5" />
-                    </button>
-                  </div>
-
-                  {/* Course name */}
-                  <h3 className="text-xl font-black text-gray-900 dark:text-white mb-6 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2 leading-tight">
-                    {course.name}
-                  </h3>
-
-                  {/* Course details */}
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-blue-100 dark:bg-blue-950/30 rounded-xl flex items-center justify-center">
-                        <Clock className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                      </div>
-                      <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-                        {course.duration}
+        ) : activeTab === "courses" ? (
+          <div className="grid lg:grid-cols-[2fr,1.1fr] gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+              {courses.map((course, index) => (
+                <div
+                  key={course.id}
+                  className="group cursor-pointer animate-slide-up"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                  onClick={() => setSelectedCourse(course)}
+                >
+                  <div className="bg-white dark:bg-gray-900 rounded-3xl p-6 border-2 border-gray-200 dark:border-gray-800 hover:border-blue-600 dark:hover:border-blue-600 shadow-lg hover:shadow-2xl transition-all transform hover:scale-[1.02]">
+                    {/* Course code badge */}
+                    <div className="flex items-start justify-between mb-4">
+                      <span className="inline-block px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-xl text-sm shadow-md">
+                        {course.code}
                       </span>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          handleDeleteCourse(course.id)
+                        }}
+                        className="p-2 rounded-xl text-gray-400 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-950/30 transition-colors"
+                      >
+                        <Trash2 className="w-5 h-5" />
+                      </button>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-purple-100 dark:bg-purple-950/30 rounded-xl flex items-center justify-center">
-                        <Users className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+
+                    {/* Course name */}
+                    <h3 className="text-xl font-black text-gray-900 dark:text-white mb-6 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2 leading-tight">
+                      {course.name}
+                    </h3>
+
+                    {/* Course details */}
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 bg-blue-100 dark:bg-blue-950/30 rounded-xl flex items-center justify-center">
+                          <Clock className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                        </div>
+                        <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                          {course.duration}
+                        </span>
                       </div>
-                      <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-                        {course.students} students
-                      </span>
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 bg-purple-100 dark:bg-purple-950/30 rounded-xl flex items-center justify-center">
+                          <Users className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+                        </div>
+                        <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                          {course.students} students
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            {/* Right column left empty while on Courses tab */}
+            <div className="hidden lg:block" />
+          </div>
+        ) : (
+          <div className="max-w-3xl">
+            <AnnouncementsPanel facultyId={user?.id} facultyName={user?.name} />
           </div>
         )}
 
