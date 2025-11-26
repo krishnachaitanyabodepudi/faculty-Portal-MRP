@@ -104,8 +104,8 @@ but you are ALLOWED and EXPECTED to go deeper academically if needed.
       const result = await model.generateContentStream({
         contents: formattedMessages,
         generationConfig: {
-          // Limit response length so answers stay focused and not too long
-          maxOutputTokens: 320,
+          // Keep answers focused but long enough to finish explanations
+          maxOutputTokens: 640,
         },
       });
 
@@ -138,7 +138,7 @@ but you are ALLOWED and EXPECTED to go deeper academically if needed.
     const fallback = await model.generateContent({
       contents: formattedMessages,
       generationConfig: {
-        maxOutputTokens: 320,
+        maxOutputTokens: 640,
       },
     });
 

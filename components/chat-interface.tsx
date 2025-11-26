@@ -110,17 +110,17 @@ export function ChatInterface() {
   }
 
   return (
-    <Card className="h-[calc(100vh-16rem)] shadow-lg border-2">
+    <Card className="h-[calc(100vh-12rem)] shadow-lg border-2">
       <CardHeader className="border-b bg-gradient-to-r from-primary/5 to-accent/5">
         <CardTitle className="text-primary">Faculty Assistant</CardTitle>
         <CardDescription>Ask questions related to the course & academic context</CardDescription>
       </CardHeader>
 
-      <CardContent className="flex flex-col h-[calc(100%-5rem)]">
+      <CardContent className="flex flex-col h-full">
 
         {/* FIX: Scroll wrapper updated */}
         <ScrollArea className="flex-1 pr-4">
-          <div ref={scrollRef} className="space-y-4 max-h-full overflow-y-auto pb-6">
+          <div ref={scrollRef} className="space-y-4 pb-6">
             {messages.map((message) => (
               <div
                 key={message.id}
